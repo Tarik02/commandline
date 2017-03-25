@@ -50,6 +50,7 @@ namespace commandline {
 		}
 
 		param = *it;
+		++it;
 		return true;
 	}
 }
