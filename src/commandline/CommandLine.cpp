@@ -18,7 +18,7 @@ namespace commandline {
 		it = this->argv.begin() + 1;
 	}
 
-	bool CommandLine::available() {
+	bool CommandLine::available() const {
 		return it != argv.end();
 	}
 

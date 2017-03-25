@@ -13,7 +13,7 @@ namespace commandline {
 		CommandLine(const std::vector <std::string> &argv);
 		CommandLine(int argc, char *argv[]);
 
-		bool available();
+		bool available() const;
 		bool param(const std::string &longName, char shortName = '\0');
 		bool next(std::string &param);
 	};
