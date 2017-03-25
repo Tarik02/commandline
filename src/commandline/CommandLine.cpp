@@ -18,7 +18,7 @@ namespace commandline {
 		it = this->argv.begin() + 1;
 	}
 
-	bool CommandLine::param(const std::string &longName, char shortName = '\0') {
+	bool CommandLine::param(const std::string &longName, char shortName) {
 		if (it == argv.end()) {
 			return false;
 		}
