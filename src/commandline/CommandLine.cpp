@@ -18,8 +18,12 @@ namespace commandline {
 		it = this->argv.begin() + 1;
 	}
 
+	bool CommandLine::available() {
+		return it != argv.end();
+	}
+
 	bool CommandLine::param(const std::string &longName, char shortName) {
-		if (it == argv.end()) {
+		if (!available()) {
 			return false;
 		}
 
@@ -41,7 +45,7 @@ namespace commandline {
 	}
 
 	bool CommandLine::next(std::string &param) {
-		if (it == argv.end()) {
+		if (!available()) {
 			return false;
 		}
 
